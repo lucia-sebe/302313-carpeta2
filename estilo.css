@@ -59,9 +59,11 @@ nav {
 .contenido {
     display: flex;
     flex-direction: column;
-    margin-top: 10%;
+    margin: 10% 0;
+    gap: 2rem;
 }
 
+/* IMPACTO */
 .impacto {
     background-color: var(--lila);
     padding: 40px;
@@ -170,26 +172,17 @@ nav {
         background-color: var(--violeta);
     }
 }
-
+/* MOSQUIANO */
 .mosquiano {
-    width: 400px;
-    height: 400px;
-    margin: 93px 36px;
     border-radius: 10px;
-    min-width: 624px;
-
     display: flex;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
-
     background: #FFFFFF;
-   
 }
 
 .mosquiano img {
-    flex: 0 0 100%;
     width: 100%;
-    object-fit: cover;
     scroll-snap-align: center;
 }
 
@@ -202,6 +195,15 @@ nav {
     border-radius: 5px;
 }
 
+/* El CUENTO URUGUAYO */
+.el_cuento_uruguayo { 
+    aspect-ratio: 424/599;
+    background-size: contain;
+    border-radius: 10px;
+    background-image: url('./videos/el_cuento_uruguayo.gif');
+}
+
+/* TOTEM */
 .totem_cervezas {
     width: 300px;
     margin: 93px 36px;
@@ -212,31 +214,12 @@ nav {
     border-radius: 10px;
 }
 
-.el_cuento_uruguayo {
-    width: 424px;
-    aspect-ratio: 424/599;
-    background-size: contain;
-    background-repeat: no-repeat;
-    border-radius: 10px;
-    background-image: url('./imagenes/el_cuento_uruguayo.png');
-
-    &:hover {
-        background-image: url('./videos/el_cuento_uruguayo.gif');
-    }
-}
-
+/* DICTADURA DEL DISEÑO */
 .dictadura_del_diseno {
-    width: 350px;
     aspect-ratio: 408/570;
     background-size: contain;
-    background-repeat: no-repeat;
     border-radius: 10px;
-    background-image: url('./imagenes/dictadura_del_diseno.png');
-
-
-    &:hover {
-        background-image: url('./videos/dictadura_del_diseno.gif');
-    }
+    background-image: url('./videos/dictadura_del_diseno.gif');
 }
 
 @media only screen and (min-width: 600px) {
@@ -251,8 +234,8 @@ nav {
 
     .contenido {
         display: grid;
+        margin-top: 1rem;
         grid-template-columns: repeat(7, 1fr);
-        gap: 5%;
         grid-auto-rows: minmax(100px, auto);
     }
 
@@ -260,8 +243,33 @@ nav {
         grid-column: 1 / 5;
         grid-row: 1;
     }
-}
 
-@media only screen and (min-width: 768px) {
+    .el_cuento_uruguayo {
+        grid-column: 5 / 8;
+        grid-row: 1 / 4;
+        aspect-ratio: 424/599;
+        background-size: contain;
+        border-radius: 10px;
+        background-image: url('./imagenes/el_cuento_uruguayo.png');
+    
+        &:hover {
+            background-image: url('./videos/el_cuento_uruguayo.gif');
+        }
+    }
 
+    .mosquiano {
+        grid-column: 1 / 5;
+        grid-row: 2;
+    }
+
+    .dictadura_del_diseno {
+        grid-column: 1 / 4;
+        grid-row: 3 / 7;
+        border-radius: 10px;
+        background-image: url('./imagenes/dictadura_del_diseno.png');
+
+        &:hover {
+            background-image: url('./videos/dictadura_del_diseno.gif');
+        }
+    }
 }
