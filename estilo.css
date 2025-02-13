@@ -205,8 +205,7 @@ nav {
 
 /* TOTEM */
 .totem_cervezas {
-    width: 300px;
-    margin: 93px 36px;
+    width: 100%;
 }
 
 .totem_cervezas img {
@@ -271,5 +270,10 @@ nav {
         &:hover {
             background-image: url('./videos/dictadura_del_diseno.gif');
         }
+    }
+
+    .totem_cervezas {
+        grid-column: 4/7;
+        grid-row: 3;
     }
 }
