@@ -203,6 +203,54 @@ nav {
     background-image: url('./videos/el_cuento_uruguayo.gif');
 }
 
+/* DICTADURA DEL DISEÑO */
+.dictadura_del_diseno {
+    aspect-ratio: 408/570;
+    background-size: contain;
+    border-radius: 10px;
+    background-image: url('./videos/dictadura_del_diseno.gif');
+}
+
+/* VANS */
+.vans {
+    width: 100%;
+    padding: 10%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    border-radius: 10px;
+}
+
+.vans div {
+    border-radius: 10px;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+    aspect-ratio: 620/877;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.afiche1 {
+    background-image: url("./imagenes/vans_afiche1.png");
+    &:hover {
+        background-image: url("./imagenes/vans_afiche1_mu.png");
+    }
+}
+
+.afiche2 {
+    background-image: url("./imagenes/vans_afiche2.jpg");
+    &:hover {
+        background-image: url("./imagenes/vans_afiche2_mu.png");
+    }
+}
+
+.afiche3 {
+    background-image: url("./imagenes/vans_afiche3.jpg");
+    &:hover {
+        background-image: url("./imagenes/vans_afiche3_mu.png");
+    }
+}
+
 /* TOTEM */
 .totem_cervezas {
     width: 100%;
@@ -211,14 +259,6 @@ nav {
 .totem_cervezas img {
     width: 100%;
     border-radius: 10px;
-}
-
-/* DICTADURA DEL DISEÑO */
-.dictadura_del_diseno {
-    aspect-ratio: 408/570;
-    background-size: contain;
-    border-radius: 10px;
-    background-image: url('./videos/dictadura_del_diseno.gif');
 }
 
 @media only screen and (min-width: 600px) {
@@ -270,6 +310,18 @@ nav {
         &:hover {
             background-image: url('./videos/dictadura_del_diseno.gif');
         }
+    }
+
+    .vans {
+        justify-content: space-between;
+        flex-direction: row;
+        padding: 4%;
+        grid-column: 1 / 8;
+        grid-row: 4 ;
+    }
+
+    .vans div {
+        width: 31%;
     }
 
     .totem_cervezas {
