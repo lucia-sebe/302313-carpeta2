@@ -37,7 +37,7 @@ header {
     flex-direction: column;
 }
 
-.footer {
+footer {
     padding: 20px;
     display: flex;
     align-items: end;
@@ -46,7 +46,6 @@ header {
 
     img {
         width: 38px;
-        height: max-content;
     }
 }
 
@@ -132,7 +131,7 @@ nav {
             gap: 1rem;
             justify-content: center;
             text-align: center;
-            
+
             .texto-descripcion {
                 font-family: 'Manrope';
             }
@@ -463,7 +462,9 @@ nav {
     background-repeat: no-repeat;
 
     &:hover {
+        background-position: center;
         background-image: url('./imagenes/pizza-top-original.png');
+
     }
 }
 
@@ -473,7 +474,7 @@ nav {
         display: none;
     }
 
-    .footer {
+    footer {
         justify-content: start;
     }
 
@@ -524,11 +525,17 @@ nav {
         grid-column: 3 / span 2;
         grid-row: 5;
         display: flex;
+        height: max-content;
         justify-content: center;
         margin-top: 10%;
 
         div {
             width: 82%;
+            height: max-content;
+
+            &:hover {
+                background-position: top;
+            }
         }
     }
 
