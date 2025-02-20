@@ -8,7 +8,7 @@
 }
 
 :root {
-    --foto-url: url('./imagenes/foto1.webp'); 
+    --foto-url: url('./imagenes/foto1.webp');
     --violeta: #5E5491;
     --lila: #D2C7FF;
     --verde: #E1FB62;
@@ -110,7 +110,7 @@ nav {
 .contenido {
     display: flex;
     flex-direction: column;
-    margin: 10% 0;
+    margin: 5% 0;
     gap: 2rem;
 }
 
@@ -123,7 +123,7 @@ nav {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
-        gap: 1rem;
+        gap: 2rem;
 
         .sobre-mi__contenido-texto {
             color: white;
@@ -131,7 +131,8 @@ nav {
             flex-direction: column;
             gap: 1rem;
             justify-content: center;
-
+            text-align: center;
+            
             .texto-descripcion {
                 font-family: 'Manrope';
             }
@@ -306,6 +307,7 @@ nav {
 .vans {
     width: 100%;
     padding: 10%;
+    height: max-content;
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -318,7 +320,8 @@ nav {
     filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
     aspect-ratio: 620/877;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    height: max-content;
 }
 
 .afiche1 {
@@ -326,6 +329,7 @@ nav {
 
     &:hover {
         background-image: url("./imagenes/vans_afiche1_mu.webp");
+        background-size: cover;
     }
 }
 
@@ -334,6 +338,7 @@ nav {
 
     &:hover {
         background-image: url("./imagenes/vans_afiche2_mu.webp");
+        background-size: cover;
     }
 }
 
@@ -342,6 +347,7 @@ nav {
 
     &:hover {
         background-image: url("./imagenes/vans_afiche3_mu.webp");
+        background-size: cover;
     }
 }
 
@@ -356,7 +362,7 @@ nav {
     width: 100%;
 }
 
-
+/* CATALOGO */
 .catalogo {
     width: 100%;
     position: relative;
@@ -445,13 +451,8 @@ nav {
 }
 
 .raices_vivas video {
-        width: 100%;
-        border-radius: 10px;
-}
-
-.en_bici img {
-        width: 100%;
-        /* border-radius: 2.9rem; */
+    width: 100%;
+    border-radius: 10px;
 }
 
 .pizza-top div {
@@ -469,7 +470,11 @@ nav {
 
 @media only screen and (min-width: 1024px) {
     .mensaje {
-        visibility: hidden;
+        display: none;
+    }
+
+    .footer {
+        justify-content: start;
     }
 
     header {
@@ -507,16 +512,24 @@ nav {
     }
 
     .mosquiano {
-        grid-column: 4 / span 4;
+        grid-column: 1 / span 4;
         margin-top: 63px;
         height: fit-content;
-        grid-row: 4;
+        grid-row: 5;
         order: initial;
+        align-self: flex-end;
     }
 
     .pizza-top {
-        grid-column: 1 / 4;
+        grid-column: 3 / span 2;
         grid-row: 5;
+        display: flex;
+        justify-content: center;
+        margin-top: 10%;
+
+        div {
+            width: 82%;
+        }
     }
 
     .dictadura_del_diseno {
@@ -525,7 +538,7 @@ nav {
         border-radius: 10px;
         margin-bottom: 4em;
 
-       div {
+        div {
             background-image: url('./imagenes/dictadura_del_diseno.webp');
 
             &:hover {
@@ -538,8 +551,8 @@ nav {
         justify-content: space-between;
         flex-direction: row;
         padding: 4%;
-        grid-column: 1 / 8;
-        grid-row: 6;
+        grid-column: 3 / 8;
+        grid-row: 4;
     }
 
     .vans div {
@@ -549,16 +562,19 @@ nav {
     .totem_cervezas {
         grid-column: 5/ span 3;
         grid-row: 5;
-
-        img {
-            position: absolute;
-            bottom: 0;
-        }
+        display: flex;
+        width: 92%;
+        justify-self: end;
     }
 
     .en_bici {
-        grid-column: 1 / span 3;
+        grid-column: 1 / span 2;
         grid-row: 4;
+        position: relative;
+
+        img {
+            position: absolute;
+        }
     }
 
     .catalogo {
@@ -582,6 +598,8 @@ nav {
                 flex-direction: column;
                 justify-content: center;
                 width: 55%;
+                gap: 4rem;
+                text-align: start;
             }
 
             .sobre-mi__imagen {
@@ -589,10 +607,6 @@ nav {
             }
         }
     }
-
-    /* .en_bici__gif {
-        border-radius: 5.5rem;
-    } */
 }
 
 
