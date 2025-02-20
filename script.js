@@ -10,11 +10,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const navLinks = document.querySelectorAll('.nav-link');
 
-  const actualUrl = window.location.pathname;
+  const actualUrl = window.location.href;
 
 
   navLinks.forEach(link => {
-      if (link.pathname === actualUrl || (link.pathname === '/index.html' && actualUrl === '/')) {
+      if (link.href === actualUrl || (link.pathname.split('/').pop() === 'index.html' && actualUrl.split('/').pop() === '')) {
           link.classList.add('activado');
       }
   });
