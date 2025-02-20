@@ -8,7 +8,7 @@
 }
 
 :root {
-    --foto-url: url('./imagenes/foto1.webp');
+    --foto-url: url('./imagenes/foto1.webp'); 
     --violeta: #5E5491;
     --lila: #D2C7FF;
     --verde: #E1FB62;
@@ -89,6 +89,12 @@ nav {
     color: white;
     font-family: 'Manrope';
     text-align: center;
+    margin: 5%;
+
+    img {
+        width: 20%;
+        margin-bottom: 1rem;
+    }
 }
 
 .activado {
@@ -289,7 +295,7 @@ nav {
 }
 
 /* DICTADURA DEL DISEÑO */
-.dictadura_del_diseno-img {
+.dictadura_del_diseno div {
     aspect-ratio: 408/570;
     background-size: contain;
     border-radius: 10px;
@@ -438,19 +444,28 @@ nav {
     }
 }
 
-.plantas {
-    video {
+.raices_vivas video {
         width: 100%;
         border-radius: 10px;
+}
+
+.en_bici img {
+        width: 100%;
+        /* border-radius: 2.9rem; */
+}
+
+.pizza-top div {
+    background-image: url('./imagenes/pizza-top.svg');
+    aspect-ratio: 1/1;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &:hover {
+        background-image: url('./imagenes/pizza-top-original.png');
     }
 }
 
-.en_bici {
-    .en_bici__gif {
-        width: 100%;
-        border-radius: 2.9rem;
-    }
-}
 
 @media only screen and (min-width: 1024px) {
     .mensaje {
@@ -508,17 +523,14 @@ nav {
         grid-column: 1 / 4;
         grid-row: 2;
         border-radius: 10px;
+        margin-bottom: 4em;
 
-        .dictadura_del_diseno-img {
+       div {
             background-image: url('./imagenes/dictadura_del_diseno.webp');
 
             &:hover {
                 background-image: url('./videos/dictadura_del_diseno.gif');
             }
-        }
-
-        .espacio {
-            height: 100px;
         }
     }
 
@@ -556,7 +568,7 @@ nav {
         justify-content: space-between;
     }
 
-    .plantas {
+    .raices_vivas {
         grid-column: 4 / 8;
         grid-row: 2;
         align-self: end;
@@ -578,9 +590,9 @@ nav {
         }
     }
 
-    .en_bici__gif {
+    /* .en_bici__gif {
         border-radius: 5.5rem;
-    }
+    } */
 }
 
 
